@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 	
 	<properties>
-		<jcerti.branch>master</jcerti.branch>
+		<jcerti.source>master</jcerti.source>
 	</properties>
 
     <dependencies>
@@ -44,7 +44,7 @@
                             <goal>wget</goal>
                         </goals>
                         <configuration>
-                            <url>https://github.com/Aidamina/jcerti/archive/${jcerti.branch}.zip</url>
+                            <url>https://github.com/Aidamina/jcerti/archive/${jcerti.source}.zip</url>
                             <unpack>true</unpack>
                             <cacheDirectory>${project.build.directory}/download</cacheDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources/</outputDirectory>
@@ -64,7 +64,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>${project.build.directory}/generated-sources/jcerti-${jcerti.branch}/src</source>
+                                <source>${project.build.directory}/generated-sources/jcerti-${jcerti.source}/src</source>
                             </sources>
                         </configuration>
                     </execution>
